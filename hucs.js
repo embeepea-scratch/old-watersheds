@@ -47,7 +47,7 @@ $(document).ready(function() {
     }).addTo(map);
 
 
-    map.setView([36.1, -82.51], 8);
+    map.setView([36.1, -92.0], 6);
 
     //  //$.getJSON('h12-50000-5e4.s.topojson', function(topo) {
     //  $.getJSON('newh.topojson', function(topo) {
@@ -205,6 +205,17 @@ $(document).ready(function() {
             }
         });
         dataLayer.addTo(map);
+
+        var fadeTime = 2000;
+        $('#waitmessage').html("ready!");
+        $('#map').hide();
+        $('#map').removeClass("dimmed");
+        $('#map').fadeIn(fadeTime);
+        $('#waitmessage').fadeOut(fadeTime, function() {
+            $('#waitmessage').hide();
+        });
+
+
     });
 
 });
