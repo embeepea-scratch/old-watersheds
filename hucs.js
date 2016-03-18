@@ -37,13 +37,11 @@ $(document).ready(function() {
 
     L.control.attribution({position: 'topright', prefix: ''}).addTo(map);
 
-
     L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: '',
         maxZoom: 18,
         id: 'mapbox.streets',
-        // the following access token is for mapbox account 'embeepea' (mbp@geomtech.com), created Tue Aug 11 2015:
-        accessToken: 'pk.eyJ1IjoiZW1iZWVwZWEiLCJhIjoiZTIyMTc1MmFkOWYwODI3MTYwMmY3MDU0NTYxNmYxZWUifQ.hm8HaatuyBAdwRWiYYYBZw'
+        accessToken: mapbox_credentials.accessToken
     }).addTo(map);
 
 
