@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Watersheds</title>
+  <link rel="stylesheet" type="text/css" href="libs/leaflet/leaflet.css"> 
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+  <script src="libs/jquery/jquery.min.js"></script>
+  <script src="libs/leaflet/leaflet.js"></script>
+  <script src="libs/Leaflet.CanvasLayer/leaflet_canvas_layer.js"></script>
+  <script src="libs/topojson/topojson.v1.min.js"></script>
+  <script>module = {};</script>
+  <script src="libs/sprintf/lib/sprintf.js"></script>
+  <script src="topojsonCanvasLayer.js"></script>
+  <script src="mapbox_credentials.js"></script>
+  <script src="hucs.js"></script>
+<style type="text/css">
+#waitmessage {
+  position: fixed;
+  background-color: #ffffff;
+  font-size: 24pt;
+  border: 1px solid black;
+  padding: 50px;
+  border-radius: 25px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dimmed {
+  opacity: 0.2;
+}
+</style>
+</head>
+<body>
+  <div id="map" class="dimmed"></div>
+  <div id="waitmessage">patience ...</div>
+</body>
+</html>
