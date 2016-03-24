@@ -1,0 +1,35 @@
+#! /usr/bin/env node
+
+fs = require('fs');
+
+console.log('at 1');
+topo = JSON.parse(fs.readFileSync('./h12.topojson'));
+console.log('at 2');
+topo.objects['h12'].geometries.forEach(function(geom) {
+  geom.properties = {
+    "TOHUC": geom.properties.TOHUC
+  }
+});
+console.log('at 3');
+fs.writeFileSync("new.topojson", JSON.stringify(topo));
+console.log('at 4');
+
+// {
+//   "type":"Topology",
+//   "objects": {
+//     "h12": { 
+//       "type":"GeometryCollection",
+//       "bbox":[-90.62349624060789,24.512236010910442,-75.3890450434215,37.521034963634804],
+//       "geometries":[
+//         {
+//           "type":"Polygon",
+//           "properties": {
+//             "TOHUC":"031401060302"
+//           },
+//           "id":"031401060301",
+//           "arcs":[[0,1,2,3,4]]
+//         },
+//         {
+//           "type":
+//           "Polygon","properties": {
+//             "TOHUC":"0314....
