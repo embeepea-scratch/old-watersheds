@@ -25,6 +25,7 @@ module.exports = {
         ],
         noParse: [/libs\/jquery/,
                   /libs\/leaflet\/leaflet\.js/,
+                  /libs\/Leaflet\.CanvasLayer\/leaflet_canvas_layer\.js/,
                   /libs\/Leaflet\.CanvasLayer/]
     }
 };
